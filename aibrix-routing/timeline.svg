@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
+<title id="t">Queue-time score of a pod after it slows down</title>
+<desc id="d">Model of AIBrix scoring, 100,000 prior requests. The lifetime mean crosses the other pod's 0.5 s at 605 s; the 1-minute mean crosses it at 15 s.</desc>
+<style>
+  .surface{fill:#fcfcfb} .ink{fill:#0b0b0b} .ink2{fill:#52514e} .muted{fill:#898781}
+  .grid{stroke:#e1e0d9} .axis{stroke:#898781} .ref{stroke:#898781}
+  .s1{stroke:#2a78d6} .s2{stroke:#eb6834} .f1{fill:#2a78d6} .f2{fill:#eb6834} .ring{stroke:#fcfcfb}
+  @media (prefers-color-scheme: dark){
+    .surface{fill:#1a1a19} .ink{fill:#f0efec} .ink2{fill:#c3c2b7}
+    .grid{stroke:#2c2c2a} .s1{stroke:#3987e5} .s2{stroke:#d95926}
+    .f1{fill:#3987e5} .f2{fill:#d95926} .ring{stroke:#1a1a19}
+  }
+  text{font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+</style>
+<rect class="surface" width="760" height="380"/>
+<text class="ink" x="64" y="24" font-size="16" font-weight="600">How long a slowed pod keeps winning the route</text>
+<text class="ink2" x="64" y="43" font-size="12">Queue-time score after the pod slows from 0.05 s to 2 s at t = 0, after serving 100,000 requests.</text>
+<text class="ink2" x="64" y="59" font-size="12">Model of the merged scoring rules with 5 s scrapes, not a cluster measurement.</text>
+<line class="grid" x1="64" x2="610" y1="328.0" y2="328.0" stroke-width="1"/>
+<text class="muted" x="56" y="332.0" font-size="11" text-anchor="end">0 s</text>
+<line class="grid" x1="64" x2="610" y1="271.8" y2="271.8" stroke-width="1"/>
+<text class="muted" x="56" y="275.8" font-size="11" text-anchor="end">0.5 s</text>
+<line class="grid" x1="64" x2="610" y1="215.6" y2="215.6" stroke-width="1"/>
+<text class="muted" x="56" y="219.6" font-size="11" text-anchor="end">1 s</text>
+<line class="grid" x1="64" x2="610" y1="159.4" y2="159.4" stroke-width="1"/>
+<text class="muted" x="56" y="163.4" font-size="11" text-anchor="end">1.5 s</text>
+<line class="grid" x1="64" x2="610" y1="103.2" y2="103.2" stroke-width="1"/>
+<text class="muted" x="56" y="107.2" font-size="11" text-anchor="end">2 s</text>
+<text class="muted" x="107.1" y="346" font-size="11" text-anchor="middle">0</text>
+<text class="muted" x="178.9" y="346" font-size="11" text-anchor="middle">100</text>
+<text class="muted" x="250.8" y="346" font-size="11" text-anchor="middle">200</text>
+<text class="muted" x="322.6" y="346" font-size="11" text-anchor="middle">300</text>
+<text class="muted" x="394.5" y="346" font-size="11" text-anchor="middle">400</text>
+<text class="muted" x="466.3" y="346" font-size="11" text-anchor="middle">500</text>
+<text class="muted" x="538.2" y="346" font-size="11" text-anchor="middle">600</text>
+<text class="muted" x="610.0" y="346" font-size="11" text-anchor="middle">700</text>
+<line class="axis" x1="64" x2="610" y1="328.0" y2="328.0" stroke-width="1"/>
+<text class="ink2" x="337" y="368" font-size="12" text-anchor="middle">seconds since the slowdown</text>
+<line class="ref" x1="64" x2="610" y1="271.8" y2="271.8" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text class="ink2" x="618" y="289.8" font-size="12">other pod, 0.5 s</text>
+<path class="s1" d="M67.6,322.4 L71.2,322.4 L74.8,322.4 L78.4,322.4 L82.0,322.4 L85.6,322.4 L89.1,322.4 L92.7,322.4 L96.3,322.4 L99.9,322.4 L103.5,322.4 L107.1,322.4 L110.7,321.8 L114.3,321.3 L117.9,320.8 L121.5,320.2 L125.1,319.7 L128.7,319.1 L132.2,318.6 L135.8,318.1 L139.4,317.6 L143.0,317.0 L146.6,316.5 L150.2,316.0 L153.8,315.5 L157.4,315.0 L161.0,314.5 L164.6,314.0 L168.2,313.4 L171.8,312.9 L175.4,312.4 L178.9,311.9 L182.5,311.4 L186.1,311.0 L189.7,310.5 L193.3,310.0 L196.9,309.5 L200.5,309.0 L204.1,308.5 L207.7,308.0 L211.3,307.6 L214.9,307.1 L218.5,306.6 L222.1,306.2 L225.6,305.7 L229.2,305.2 L232.8,304.7 L236.4,304.3 L240.0,303.8 L243.6,303.4 L247.2,302.9 L250.8,302.5 L254.4,302.0 L258.0,301.6 L261.6,301.1 L265.2,300.7 L268.8,300.2 L272.3,299.8 L275.9,299.3 L279.5,298.9 L283.1,298.5 L286.7,298.0 L290.3,297.6 L293.9,297.2 L297.5,296.7 L301.1,296.3 L304.7,295.9 L308.3,295.5 L311.9,295.0 L315.4,294.6 L319.0,294.2 L322.6,293.8 L326.2,293.4 L329.8,293.0 L333.4,292.6 L337.0,292.2 L340.6,291.7 L344.2,291.3 L347.8,290.9 L351.4,290.5 L355.0,290.1 L358.6,289.7 L362.1,289.4 L365.7,288.9 L369.3,288.6 L372.9,288.2 L376.5,287.8 L380.1,287.4 L383.7,287.0 L387.3,286.6 L390.9,286.2 L394.5,285.9 L398.1,285.5 L401.7,285.1 L405.2,284.7 L408.8,284.4 L412.4,284.0 L416.0,283.6 L419.6,283.2 L423.2,282.9 L426.8,282.5 L430.4,282.1 L434.0,281.8 L437.6,281.4 L441.2,281.0 L444.8,280.7 L448.4,280.3 L451.9,280.0 L455.5,279.6 L459.1,279.3 L462.7,278.9 L466.3,278.6 L469.9,278.2 L473.5,277.9 L477.1,277.5 L480.7,277.2 L484.3,276.8 L487.9,276.5 L491.5,276.1 L495.1,275.8 L498.6,275.5 L502.2,275.1 L505.8,274.8 L509.4,274.4 L513.0,274.1 L516.6,273.8 L520.2,273.5 L523.8,273.1 L527.4,272.8 L531.0,272.5 L534.6,272.1 L538.2,271.8 L541.8,271.5 L545.3,271.2 L548.9,270.8 L552.5,270.5 L556.1,270.2 L559.7,269.9 L563.3,269.6 L566.9,269.3 L570.5,268.9 L574.1,268.6 L577.7,268.3 L581.3,268.0 L584.9,267.7 L588.4,267.4 L592.0,267.1 L595.6,266.8 L599.2,266.5 L602.8,266.2 L606.4,265.9 L610.0,265.6" fill="none" stroke-width="2" stroke-linejoin="round"/>
+<path class="s2" d="M67.6,322.4 L71.2,322.4 L74.8,322.4 L78.4,322.4 L82.0,322.4 L85.6,322.4 L89.1,322.4 L92.7,322.4 L96.3,322.4 L99.9,322.4 L103.5,322.4 L107.1,322.4 L110.7,304.1 L114.3,285.9 L117.9,267.6 L121.5,249.3 L125.1,231.1 L128.7,212.8 L132.2,194.5 L135.8,176.3 L139.4,158.0 L143.0,139.8 L146.6,121.5 L150.2,103.2 L153.8,103.2 L157.4,103.2 L161.0,103.2 L164.6,103.2 L168.2,103.2 L171.8,103.2 L175.4,103.2 L178.9,103.2 L182.5,103.2 L186.1,103.2 L189.7,103.2 L193.3,103.2 L196.9,103.2 L200.5,103.2 L204.1,103.2 L207.7,103.2 L211.3,103.2 L214.9,103.2 L218.5,103.2 L222.1,103.2 L225.6,103.2 L229.2,103.2 L232.8,103.2 L236.4,103.2 L240.0,103.2 L243.6,103.2 L247.2,103.2 L250.8,103.2 L254.4,103.2 L258.0,103.2 L261.6,103.2 L265.2,103.2 L268.8,103.2 L272.3,103.2 L275.9,103.2 L279.5,103.2 L283.1,103.2 L286.7,103.2 L290.3,103.2 L293.9,103.2 L297.5,103.2 L301.1,103.2 L304.7,103.2 L308.3,103.2 L311.9,103.2 L315.4,103.2 L319.0,103.2 L322.6,103.2 L326.2,103.2 L329.8,103.2 L333.4,103.2 L337.0,103.2 L340.6,103.2 L344.2,103.2 L347.8,103.2 L351.4,103.2 L355.0,103.2 L358.6,103.2 L362.1,103.2 L365.7,103.2 L369.3,103.2 L372.9,103.2 L376.5,103.2 L380.1,103.2 L383.7,103.2 L387.3,103.2 L390.9,103.2 L394.5,103.2 L398.1,103.2 L401.7,103.2 L405.2,103.2 L408.8,103.2 L412.4,103.2 L416.0,103.2 L419.6,103.2 L423.2,103.2 L426.8,103.2 L430.4,103.2 L434.0,103.2 L437.6,103.2 L441.2,103.2 L444.8,103.2 L448.4,103.2 L451.9,103.2 L455.5,103.2 L459.1,103.2 L462.7,103.2 L466.3,103.2 L469.9,103.2 L473.5,103.2 L477.1,103.2 L480.7,103.2 L484.3,103.2 L487.9,103.2 L491.5,103.2 L495.1,103.2 L498.6,103.2 L502.2,103.2 L505.8,103.2 L509.4,103.2 L513.0,103.2 L516.6,103.2 L520.2,103.2 L523.8,103.2 L527.4,103.2 L531.0,103.2 L534.6,103.2 L538.2,103.2 L541.8,103.2 L545.3,103.2 L548.9,103.2 L552.5,103.2 L556.1,103.2 L559.7,103.2 L563.3,103.2 L566.9,103.2 L570.5,103.2 L574.1,103.2 L577.7,103.2 L581.3,103.2 L584.9,103.2 L588.4,103.2 L592.0,103.2 L595.6,103.2 L599.2,103.2 L602.8,103.2 L606.4,103.2 L610.0,103.2" fill="none" stroke-width="2" stroke-linejoin="round"/>
+<circle class="f1 ring" cx="541.8" cy="271.5" r="5" stroke-width="2"/>
+<text class="ink" x="533.8" y="259.5" font-size="12" text-anchor="end">switches at 605 s</text>
+<circle class="f2 ring" cx="117.9" cy="267.6" r="5" stroke-width="2"/>
+<text class="ink" x="125.9" y="257.6" font-size="12" text-anchor="start">switches at 15 s</text>
+<text class="ink" x="618" y="107.2" font-size="12">1-minute mean (merged)</text>
+<text class="ink" x="618" y="257.6" font-size="12">lifetime mean (before)</text>
+<line class="s1" x1="64" x2="82" y1="74" y2="74" stroke-width="2"/>
+<text class="ink2" x="88" y="78" font-size="12">lifetime mean (before)</text>
+<line class="s2" x1="254" x2="272" y1="74" y2="74" stroke-width="2"/>
+<text class="ink2" x="278" y="78" font-size="12">1-minute mean (merged)</text>
+</svg>
