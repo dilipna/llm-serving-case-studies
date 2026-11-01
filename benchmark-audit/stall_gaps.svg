@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-labelledby="t d">
+<title id="t">Inter-token gaps of one streamed request under a 300 ms stall</title>
+<desc id="d">63 gaps between streamed tokens. Before the stall they are about 12 ms; gap 19 is 314 ms; the tokens held during the stall then arrive almost at once. The request's average gap is 11.3 ms.</desc>
+<style>
+  .surface{fill:#fcfcfb} .ink{fill:#0b0b0b} .ink2{fill:#52514e} .muted{fill:#898781}
+  .grid{stroke:#e1e0d9} .axis{stroke:#898781} .ref{stroke:#52514e} .f1{fill:#2a78d6}
+  @media (prefers-color-scheme: dark){
+    .surface{fill:#1a1a19} .ink{fill:#f0efec} .ink2{fill:#c3c2b7}
+    .grid{stroke:#2c2c2a} .ref{stroke:#c3c2b7} .f1{fill:#3987e5}
+  }
+  text{font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+</style>
+<rect class="surface" width="760" height="400"/>
+<text class="ink" x="64" y="24" font-size="16" font-weight="600">A 300 ms freeze, seen gap by gap and as one average</text>
+<text class="ink2" x="64" y="43" font-size="12">Gaps between streamed tokens for one typical request, measured at the proxy. The proxy froze every stream</text>
+<text class="ink2" x="64" y="59" font-size="12">for 300 ms before token 20. Qwen3-0.6B on vLLM, GuideLLM run 1, 8 requests in flight.</text>
+<line class="grid" x1="64" x2="736" y1="348.0" y2="348.0" stroke-width="1"/>
+<text class="muted" x="56" y="352.0" font-size="11" text-anchor="end">0 ms</text>
+<line class="grid" x1="64" x2="736" y1="276.0" y2="276.0" stroke-width="1"/>
+<text class="muted" x="56" y="280.0" font-size="11" text-anchor="end">100 ms</text>
+<line class="grid" x1="64" x2="736" y1="204.0" y2="204.0" stroke-width="1"/>
+<text class="muted" x="56" y="208.0" font-size="11" text-anchor="end">200 ms</text>
+<line class="grid" x1="64" x2="736" y1="132.0" y2="132.0" stroke-width="1"/>
+<text class="muted" x="56" y="136.0" font-size="11" text-anchor="end">300 ms</text>
+<text class="muted" x="69.3" y="366" font-size="11" text-anchor="middle">1</text>
+<text class="muted" x="165.3" y="366" font-size="11" text-anchor="middle">10</text>
+<text class="muted" x="272.0" y="366" font-size="11" text-anchor="middle">20</text>
+<text class="muted" x="378.7" y="366" font-size="11" text-anchor="middle">30</text>
+<text class="muted" x="485.3" y="366" font-size="11" text-anchor="middle">40</text>
+<text class="muted" x="592.0" y="366" font-size="11" text-anchor="middle">50</text>
+<text class="muted" x="698.7" y="366" font-size="11" text-anchor="middle">60</text>
+<text class="ink2" x="400" y="388" font-size="12" text-anchor="middle">gap number (gap 1 is between tokens 1 and 2)</text>
+<path class="f1" d="M65.0,348.0 L65.0,343.9 Q65.0,339.9 69.0,339.9 L69.7,339.9 Q73.7,339.9 73.7,343.9 L73.7,348.0 Z"><title>gap 1: 11.3 ms</title></path>
+<path class="f1" d="M75.7,348.0 L75.7,343.6 Q75.7,339.6 79.7,339.6 L80.3,339.6 Q84.3,339.6 84.3,343.6 L84.3,348.0 Z"><title>gap 2: 11.7 ms</title></path>
+<path class="f1" d="M86.3,348.0 L86.3,343.7 Q86.3,339.7 90.3,339.7 L91.0,339.7 Q95.0,339.7 95.0,343.7 L95.0,348.0 Z"><title>gap 3: 11.6 ms</title></path>
+<path class="f1" d="M97.0,348.0 L97.0,343.4 Q97.0,339.4 101.0,339.4 L101.7,339.4 Q105.7,339.4 105.7,343.4 L105.7,348.0 Z"><title>gap 4: 12.0 ms</title></path>
+<path class="f1" d="M107.7,348.0 L107.7,343.3 Q107.7,339.3 111.7,339.3 L112.3,339.3 Q116.3,339.3 116.3,343.3 L116.3,348.0 Z"><title>gap 5: 12.0 ms</title></path>
+<path class="f1" d="M118.3,348.0 L118.3,343.7 Q118.3,339.7 122.3,339.7 L123.0,339.7 Q127.0,339.7 127.0,343.7 L127.0,348.0 Z"><title>gap 6: 11.6 ms</title></path>
+<path class="f1" d="M129.0,348.0 L129.0,343.5 Q129.0,339.5 133.0,339.5 L133.7,339.5 Q137.7,339.5 137.7,343.5 L137.7,348.0 Z"><title>gap 7: 11.8 ms</title></path>
+<path class="f1" d="M139.7,348.0 L139.7,343.4 Q139.7,339.4 143.7,339.4 L144.3,339.4 Q148.3,339.4 148.3,343.4 L148.3,348.0 Z"><title>gap 8: 12.0 ms</title></path>
+<path class="f1" d="M150.3,348.0 L150.3,342.9 Q150.3,338.9 154.3,338.9 L155.0,338.9 Q159.0,338.9 159.0,342.9 L159.0,348.0 Z"><title>gap 9: 12.6 ms</title></path>
+<path class="f1" d="M161.0,348.0 L161.0,343.9 Q161.0,339.9 165.0,339.9 L165.7,339.9 Q169.7,339.9 169.7,343.9 L169.7,348.0 Z"><title>gap 10: 11.3 ms</title></path>
+<path class="f1" d="M171.7,348.0 L171.7,343.6 Q171.7,339.6 175.7,339.6 L176.3,339.6 Q180.3,339.6 180.3,343.6 L180.3,348.0 Z"><title>gap 11: 11.7 ms</title></path>
+<path class="f1" d="M182.3,348.0 L182.3,343.5 Q182.3,339.5 186.3,339.5 L187.0,339.5 Q191.0,339.5 191.0,343.5 L191.0,348.0 Z"><title>gap 12: 11.8 ms</title></path>
+<path class="f1" d="M193.0,348.0 L193.0,343.4 Q193.0,339.4 197.0,339.4 L197.7,339.4 Q201.7,339.4 201.7,343.4 L201.7,348.0 Z"><title>gap 13: 12.0 ms</title></path>
+<path class="f1" d="M203.7,348.0 L203.7,343.4 Q203.7,339.4 207.7,339.4 L208.3,339.4 Q212.3,339.4 212.3,343.4 L212.3,348.0 Z"><title>gap 14: 12.0 ms</title></path>
+<path class="f1" d="M214.3,348.0 L214.3,343.6 Q214.3,339.6 218.3,339.6 L219.0,339.6 Q223.0,339.6 223.0,343.6 L223.0,348.0 Z"><title>gap 15: 11.7 ms</title></path>
+<path class="f1" d="M225.0,348.0 L225.0,343.9 Q225.0,339.9 229.0,339.9 L229.7,339.9 Q233.7,339.9 233.7,343.9 L233.7,348.0 Z"><title>gap 16: 11.3 ms</title></path>
+<path class="f1" d="M235.7,348.0 L235.7,343.5 Q235.7,339.5 239.7,339.5 L240.3,339.5 Q244.3,339.5 244.3,343.5 L244.3,348.0 Z"><title>gap 17: 11.9 ms</title></path>
+<path class="f1" d="M246.3,348.0 L246.3,343.6 Q246.3,339.6 250.3,339.6 L251.0,339.6 Q255.0,339.6 255.0,343.6 L255.0,348.0 Z"><title>gap 18: 11.7 ms</title></path>
+<path class="f1" d="M257.0,348.0 L257.0,125.8 Q257.0,121.8 261.0,121.8 L261.7,121.8 Q265.7,121.8 265.7,125.8 L265.7,348.0 Z"><title>gap 19: 314.2 ms</title></path>
+<path class="f1" d="M267.7,348.0 L267.7,347.5 Q267.7,347.0 268.2,347.0 L275.8,347.0 Q276.3,347.0 276.3,347.5 L276.3,348.0 Z"><title>gap 20: 0.1 ms</title></path>
+<path class="f1" d="M278.3,348.0 L278.3,347.5 Q278.3,347.0 278.8,347.0 L286.5,347.0 Q287.0,347.0 287.0,347.5 L287.0,348.0 Z"><title>gap 21: 0.1 ms</title></path>
+<path class="f1" d="M289.0,348.0 L289.0,347.5 Q289.0,347.0 289.5,347.0 L297.2,347.0 Q297.7,347.0 297.7,347.5 L297.7,348.0 Z"><title>gap 22: 0.0 ms</title></path>
+<path class="f1" d="M299.7,348.0 L299.7,347.5 Q299.7,347.0 300.2,347.0 L307.8,347.0 Q308.3,347.0 308.3,347.5 L308.3,348.0 Z"><title>gap 23: 0.0 ms</title></path>
+<path class="f1" d="M310.3,348.0 L310.3,347.5 Q310.3,347.0 310.8,347.0 L318.5,347.0 Q319.0,347.0 319.0,347.5 L319.0,348.0 Z"><title>gap 24: 0.0 ms</title></path>
+<path class="f1" d="M321.0,348.0 L321.0,347.5 Q321.0,347.0 321.5,347.0 L329.2,347.0 Q329.7,347.0 329.7,347.5 L329.7,348.0 Z"><title>gap 25: 0.0 ms</title></path>
+<path class="f1" d="M331.7,348.0 L331.7,347.5 Q331.7,347.0 332.2,347.0 L339.8,347.0 Q340.3,347.0 340.3,347.5 L340.3,348.0 Z"><title>gap 26: 0.0 ms</title></path>
+<path class="f1" d="M342.3,348.0 L342.3,347.5 Q342.3,347.0 342.8,347.0 L350.5,347.0 Q351.0,347.0 351.0,347.5 L351.0,348.0 Z"><title>gap 27: 0.0 ms</title></path>
+<path class="f1" d="M353.0,348.0 L353.0,347.5 Q353.0,347.0 353.5,347.0 L361.2,347.0 Q361.7,347.0 361.7,347.5 L361.7,348.0 Z"><title>gap 28: 0.0 ms</title></path>
+<path class="f1" d="M363.7,348.0 L363.7,347.5 Q363.7,347.0 364.2,347.0 L371.8,347.0 Q372.3,347.0 372.3,347.5 L372.3,348.0 Z"><title>gap 29: 0.0 ms</title></path>
+<path class="f1" d="M374.3,348.0 L374.3,347.5 Q374.3,347.0 374.8,347.0 L382.5,347.0 Q383.0,347.0 383.0,347.5 L383.0,348.0 Z"><title>gap 30: 0.0 ms</title></path>
+<path class="f1" d="M385.0,348.0 L385.0,347.5 Q385.0,347.0 385.5,347.0 L393.2,347.0 Q393.7,347.0 393.7,347.5 L393.7,348.0 Z"><title>gap 31: 0.0 ms</title></path>
+<path class="f1" d="M395.7,348.0 L395.7,347.5 Q395.7,347.0 396.2,347.0 L403.8,347.0 Q404.3,347.0 404.3,347.5 L404.3,348.0 Z"><title>gap 32: 0.0 ms</title></path>
+<path class="f1" d="M406.3,348.0 L406.3,347.5 Q406.3,347.0 406.8,347.0 L414.5,347.0 Q415.0,347.0 415.0,347.5 L415.0,348.0 Z"><title>gap 33: 0.0 ms</title></path>
+<path class="f1" d="M417.0,348.0 L417.0,347.5 Q417.0,347.0 417.5,347.0 L425.2,347.0 Q425.7,347.0 425.7,347.5 L425.7,348.0 Z"><title>gap 34: 0.0 ms</title></path>
+<path class="f1" d="M427.7,348.0 L427.7,347.5 Q427.7,347.0 428.2,347.0 L435.8,347.0 Q436.3,347.0 436.3,347.5 L436.3,348.0 Z"><title>gap 35: 0.0 ms</title></path>
+<path class="f1" d="M438.3,348.0 L438.3,347.5 Q438.3,347.0 438.8,347.0 L446.5,347.0 Q447.0,347.0 447.0,347.5 L447.0,348.0 Z"><title>gap 36: 0.0 ms</title></path>
+<path class="f1" d="M449.0,348.0 L449.0,347.5 Q449.0,347.0 449.5,347.0 L457.2,347.0 Q457.7,347.0 457.7,347.5 L457.7,348.0 Z"><title>gap 37: 0.0 ms</title></path>
+<path class="f1" d="M459.7,348.0 L459.7,347.5 Q459.7,347.0 460.2,347.0 L467.8,347.0 Q468.3,347.0 468.3,347.5 L468.3,348.0 Z"><title>gap 38: 0.0 ms</title></path>
+<path class="f1" d="M470.3,348.0 L470.3,347.5 Q470.3,347.0 470.8,347.0 L478.5,347.0 Q479.0,347.0 479.0,347.5 L479.0,348.0 Z"><title>gap 39: 0.0 ms</title></path>
+<path class="f1" d="M481.0,348.0 L481.0,347.5 Q481.0,347.0 481.5,347.0 L489.2,347.0 Q489.7,347.0 489.7,347.5 L489.7,348.0 Z"><title>gap 40: 0.0 ms</title></path>
+<path class="f1" d="M491.7,348.0 L491.7,347.5 Q491.7,347.0 492.2,347.0 L499.8,347.0 Q500.3,347.0 500.3,347.5 L500.3,348.0 Z"><title>gap 41: 0.0 ms</title></path>
+<path class="f1" d="M502.3,348.0 L502.3,347.5 Q502.3,347.0 502.8,347.0 L510.5,347.0 Q511.0,347.0 511.0,347.5 L511.0,348.0 Z"><title>gap 42: 0.0 ms</title></path>
+<path class="f1" d="M513.0,348.0 L513.0,347.5 Q513.0,347.0 513.5,347.0 L521.2,347.0 Q521.7,347.0 521.7,347.5 L521.7,348.0 Z"><title>gap 43: 0.0 ms</title></path>
+<path class="f1" d="M523.7,348.0 L523.7,347.5 Q523.7,347.0 524.2,347.0 L531.8,347.0 Q532.3,347.0 532.3,347.5 L532.3,348.0 Z"><title>gap 44: 0.0 ms</title></path>
+<path class="f1" d="M534.3,348.0 L534.3,347.5 Q534.3,347.0 534.8,347.0 L542.5,347.0 Q543.0,347.0 543.0,347.5 L543.0,348.0 Z"><title>gap 45: 0.0 ms</title></path>
+<path class="f1" d="M545.0,348.0 L545.0,346.7 Q545.0,345.4 546.3,345.4 L552.4,345.4 Q553.7,345.4 553.7,346.7 L553.7,348.0 Z"><title>gap 46: 3.6 ms</title></path>
+<path class="f1" d="M555.7,348.0 L555.7,345.4 Q555.7,342.8 558.2,342.8 L561.8,342.8 Q564.3,342.8 564.3,345.4 L564.3,348.0 Z"><title>gap 47: 7.2 ms</title></path>
+<path class="f1" d="M566.3,348.0 L566.3,343.8 Q566.3,339.8 570.3,339.8 L571.0,339.8 Q575.0,339.8 575.0,343.8 L575.0,348.0 Z"><title>gap 48: 11.4 ms</title></path>
+<path class="f1" d="M577.0,348.0 L577.0,343.4 Q577.0,339.4 581.0,339.4 L581.7,339.4 Q585.7,339.4 585.7,343.4 L585.7,348.0 Z"><title>gap 49: 11.9 ms</title></path>
+<path class="f1" d="M587.7,348.0 L587.7,344.2 Q587.7,340.5 591.4,340.5 L592.6,340.5 Q596.3,340.5 596.3,344.2 L596.3,348.0 Z"><title>gap 50: 10.4 ms</title></path>
+<path class="f1" d="M598.3,348.0 L598.3,344.1 Q598.3,340.2 602.2,340.2 L603.1,340.2 Q607.0,340.2 607.0,344.1 L607.0,348.0 Z"><title>gap 51: 10.8 ms</title></path>
+<path class="f1" d="M609.0,348.0 L609.0,344.1 Q609.0,340.3 612.9,340.3 L613.8,340.3 Q617.7,340.3 617.7,344.1 L617.7,348.0 Z"><title>gap 52: 10.7 ms</title></path>
+<path class="f1" d="M619.7,348.0 L619.7,344.1 Q619.7,340.3 623.5,340.3 L624.5,340.3 Q628.3,340.3 628.3,344.1 L628.3,348.0 Z"><title>gap 53: 10.8 ms</title></path>
+<path class="f1" d="M630.3,348.0 L630.3,344.1 Q630.3,340.2 634.2,340.2 L635.1,340.2 Q639.0,340.2 639.0,344.1 L639.0,348.0 Z"><title>gap 54: 10.8 ms</title></path>
+<path class="f1" d="M641.0,348.0 L641.0,344.3 Q641.0,340.7 644.7,340.7 L646.0,340.7 Q649.7,340.7 649.7,344.3 L649.7,348.0 Z"><title>gap 55: 10.2 ms</title></path>
+<path class="f1" d="M651.7,348.0 L651.7,344.0 Q651.7,340.1 655.6,340.1 L656.4,340.1 Q660.3,340.1 660.3,344.0 L660.3,348.0 Z"><title>gap 56: 11.0 ms</title></path>
+<path class="f1" d="M662.3,348.0 L662.3,344.1 Q662.3,340.2 666.2,340.2 L667.1,340.2 Q671.0,340.2 671.0,344.1 L671.0,348.0 Z"><title>gap 57: 10.9 ms</title></path>
+<path class="f1" d="M673.0,348.0 L673.0,344.3 Q673.0,340.6 676.7,340.6 L678.0,340.6 Q681.7,340.6 681.7,344.3 L681.7,348.0 Z"><title>gap 58: 10.2 ms</title></path>
+<path class="f1" d="M683.7,348.0 L683.7,344.0 Q683.7,340.0 687.7,340.0 L688.3,340.0 Q692.3,340.0 692.3,344.0 L692.3,348.0 Z"><title>gap 59: 11.1 ms</title></path>
+<path class="f1" d="M694.3,348.0 L694.3,344.2 Q694.3,340.3 698.2,340.3 L699.2,340.3 Q703.0,340.3 703.0,344.2 L703.0,348.0 Z"><title>gap 60: 10.7 ms</title></path>
+<path class="f1" d="M705.0,348.0 L705.0,343.8 Q705.0,339.8 709.0,339.8 L709.7,339.8 Q713.7,339.8 713.7,343.8 L713.7,348.0 Z"><title>gap 61: 11.3 ms</title></path>
+<path class="f1" d="M715.7,348.0 L715.7,343.9 Q715.7,339.9 719.7,339.9 L720.3,339.9 Q724.3,339.9 724.3,343.9 L724.3,348.0 Z"><title>gap 62: 11.3 ms</title></path>
+<path class="f1" d="M726.3,348.0 L726.3,344.3 Q726.3,340.6 730.0,340.6 L731.3,340.6 Q735.0,340.6 735.0,344.3 L735.0,348.0 Z"><title>gap 63: 10.2 ms</title></path>
+<line class="axis" x1="64" x2="736" y1="348.0" y2="348.0" stroke-width="1"/>
+<line class="ref" x1="64" x2="736" y1="339.9" y2="339.9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text class="ink" x="279.7" y="309.9" font-size="12">average gap for this request: 11.3 ms</text>
+<text class="ink2" x="279.7" y="325.9" font-size="12">what a per-request ITL percentile is built from</text>
+<text class="ink" x="273.7" y="133.8" font-size="12">gap 19: 314 ms, the freeze the user sees</text>
+<text class="ink2" x="273.7" y="149.8" font-size="12">a raw-gap ITL percentile keeps this</text>
+</svg>
